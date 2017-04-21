@@ -1,6 +1,6 @@
 import { Descriptor } from 'pip-services-commons-node';
 import { Factory } from 'pip-services-commons-node';
-export declare class CountersFactory extends Factory {
+export declare class CountersClientFactory extends Factory {
     static Descriptor: Descriptor;
     static DirectCountersDescriptor: Descriptor;
     static HttpCountersDescriptor: Descriptor;
