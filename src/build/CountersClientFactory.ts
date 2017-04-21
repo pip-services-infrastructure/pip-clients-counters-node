@@ -1,9 +1,9 @@
 import { Descriptor } from 'pip-services-commons-node';
 import { Factory } from 'pip-services-commons-node';
 
-// import { DirectCounters } from '../log/DirectCounters';
-// import { HttpCounters } from '../log/HttpCounters';
-// import { SenecaCounters } from '../log/SenecaCounters';
+import { DirectCounters } from '../counters/DirectCounters';
+import { HttpCounters } from '../counters/HttpCounters';
+import { SenecaCounters } from '../counters/SenecaCounters';
 
 import { CountersNullClientV1 } from '../version1/CountersNullClientV1';
 import { CountersDirectClientV1 } from '../version1/CountersDirectClientV1';
@@ -23,9 +23,9 @@ export class CountersClientFactory extends Factory {
 	constructor() {
 		super();
 
-		// this.registerAsType(CountersFactory.DirectCountersDescriptor, DirectCounters);
-		// this.registerAsType(CountersFactory.HttpCountersDescriptor, HttpCounters);
-		// this.registerAsType(CountersFactory.SenecaCountersDescriptor, SenecaCounters);
+		this.registerAsType(CountersClientFactory.DirectCountersDescriptor, DirectCounters);
+		this.registerAsType(CountersClientFactory.HttpCountersDescriptor, HttpCounters);
+		this.registerAsType(CountersClientFactory.SenecaCountersDescriptor, SenecaCounters);
 
 		this.registerAsType(CountersClientFactory.NullClientV1Descriptor, CountersNullClientV1);
 		this.registerAsType(CountersClientFactory.DirectClientV1Descriptor, CountersDirectClientV1);

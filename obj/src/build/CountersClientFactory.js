@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const pip_services_commons_node_1 = require("pip-services-commons-node");
 const pip_services_commons_node_2 = require("pip-services-commons-node");
-// import { DirectCounters } from '../log/DirectCounters';
-// import { HttpCounters } from '../log/HttpCounters';
-// import { SenecaCounters } from '../log/SenecaCounters';
+const DirectCounters_1 = require("../counters/DirectCounters");
+const HttpCounters_1 = require("../counters/HttpCounters");
+const SenecaCounters_1 = require("../counters/SenecaCounters");
 const CountersNullClientV1_1 = require("../version1/CountersNullClientV1");
 const CountersDirectClientV1_1 = require("../version1/CountersDirectClientV1");
 const CountersHttpClientV1_1 = require("../version1/CountersHttpClientV1");
@@ -12,9 +12,9 @@ const CountersSenecaClientV1_1 = require("../version1/CountersSenecaClientV1");
 class CountersClientFactory extends pip_services_commons_node_2.Factory {
     constructor() {
         super();
-        // this.registerAsType(CountersFactory.DirectCountersDescriptor, DirectCounters);
-        // this.registerAsType(CountersFactory.HttpCountersDescriptor, HttpCounters);
-        // this.registerAsType(CountersFactory.SenecaCountersDescriptor, SenecaCounters);
+        this.registerAsType(CountersClientFactory.DirectCountersDescriptor, DirectCounters_1.DirectCounters);
+        this.registerAsType(CountersClientFactory.HttpCountersDescriptor, HttpCounters_1.HttpCounters);
+        this.registerAsType(CountersClientFactory.SenecaCountersDescriptor, SenecaCounters_1.SenecaCounters);
         this.registerAsType(CountersClientFactory.NullClientV1Descriptor, CountersNullClientV1_1.CountersNullClientV1);
         this.registerAsType(CountersClientFactory.DirectClientV1Descriptor, CountersDirectClientV1_1.CountersDirectClientV1);
         this.registerAsType(CountersClientFactory.HttpClientV1Descriptor, CountersHttpClientV1_1.CountersHttpClientV1);
