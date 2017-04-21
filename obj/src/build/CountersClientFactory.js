@@ -22,9 +22,9 @@ class CountersClientFactory extends pip_services_commons_node_2.Factory {
     }
 }
 CountersClientFactory.Descriptor = new pip_services_commons_node_1.Descriptor('pip-services-counters', 'factory', 'default', 'default', '1.0');
-CountersClientFactory.DirectCountersDescriptor = new pip_services_commons_node_1.Descriptor('pip-services-counters', 'logger', 'direct', 'default', '1.0');
-CountersClientFactory.HttpCountersDescriptor = new pip_services_commons_node_1.Descriptor('pip-services-counters', 'logger', 'http', 'default', '1.0');
-CountersClientFactory.SenecaCountersDescriptor = new pip_services_commons_node_1.Descriptor('pip-services-counters', 'logger', 'seneca', 'default', '1.0');
+CountersClientFactory.DirectCountersDescriptor = new pip_services_commons_node_1.Descriptor('pip-services-counters', 'counters', 'direct', 'default', '1.0');
+CountersClientFactory.HttpCountersDescriptor = new pip_services_commons_node_1.Descriptor('pip-services-counters', 'counters', 'http', 'default', '1.0');
+CountersClientFactory.SenecaCountersDescriptor = new pip_services_commons_node_1.Descriptor('pip-services-counters', 'counters', 'seneca', 'default', '1.0');
 CountersClientFactory.NullClientV1Descriptor = new pip_services_commons_node_1.Descriptor('pip-services-counters', 'client', 'null', 'default', '1.0');
 CountersClientFactory.DirectClientV1Descriptor = new pip_services_commons_node_1.Descriptor('pip-services-counters', 'client', 'direct', 'default', '1.0');
 CountersClientFactory.HttpClientV1Descriptor = new pip_services_commons_node_1.Descriptor('pip-services-counters', 'client', 'http', 'default', '1.0');

@@ -12,9 +12,9 @@ import { CountersSenecaClientV1 } from '../version1/CountersSenecaClientV1';
 
 export class CountersClientFactory extends Factory {
 	public static Descriptor: Descriptor = new Descriptor('pip-services-counters', 'factory', 'default', 'default', '1.0');
-	public static DirectCountersDescriptor = new Descriptor('pip-services-counters', 'logger', 'direct', 'default', '1.0');
-	public static HttpCountersDescriptor = new Descriptor('pip-services-counters', 'logger', 'http', 'default', '1.0');
-	public static SenecaCountersDescriptor = new Descriptor('pip-services-counters', 'logger', 'seneca', 'default', '1.0');
+	public static DirectCountersDescriptor = new Descriptor('pip-services-counters', 'counters', 'direct', 'default', '1.0');
+	public static HttpCountersDescriptor = new Descriptor('pip-services-counters', 'counters', 'http', 'default', '1.0');
+	public static SenecaCountersDescriptor = new Descriptor('pip-services-counters', 'counters', 'seneca', 'default', '1.0');
 	public static NullClientV1Descriptor = new Descriptor('pip-services-counters', 'client', 'null', 'default', '1.0');
 	public static DirectClientV1Descriptor = new Descriptor('pip-services-counters', 'client', 'direct', 'default', '1.0');
 	public static HttpClientV1Descriptor = new Descriptor('pip-services-counters', 'client', 'http', 'default', '1.0');
