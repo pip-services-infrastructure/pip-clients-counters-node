@@ -6,10 +6,10 @@ import { DataPage } from 'pip-services-commons-node';
 import { DirectClient } from 'pip-services-net-node';
 
 import { ICountersClientV1 } from './ICountersClientV1';
-import { ICountersBusinessLogic } from 'pip-services-counters-node';
+//import { ICountersController } from 'pip-services-counters-node';
 import { CounterV1 } from './CounterV1';
 
-export class CountersDirectClientV1 extends DirectClient<ICountersBusinessLogic> implements ICountersClientV1 {
+export class CountersDirectClientV1 extends DirectClient<any> implements ICountersClientV1 {
             
     public constructor() {
         super();
