@@ -11,7 +11,7 @@ import { ICountersClientV1 } from './ICountersClientV1';
 export class CountersHttpClientV1 extends CommandableHttpClient implements ICountersClientV1 {
 
     constructor(config?: any) {
-        super('counters');
+        super('v1/counters');
 
         if (config != null)
             this.configure(ConfigParams.fromValue(config));
