@@ -1,8 +1,8 @@
 import { YamlConfigReader } from 'pip-services-commons-node';
-import { CountersClientFixtureV1 } from './CountersClientFixtureV1';
-import { CountersLambdaClientV1 } from '../../src/version1/CountersLambdaClientV1';
+import { PerfMonClientFixtureV1 } from './PerfMonClientFixtureV1';
+import { PerfMonLambdaClientV1 } from '../../src/version1/PerfMonLambdaClientV1';
 
-suite('CountersLambdaClient', ()=> {
+suite('PerfMonLambdaClient', ()=> {
     let config = YamlConfigReader.readConfig(null, './config/test_connections.yaml', null);
     let lambdaConfig = config.getSection('lambda');
 
@@ -10,14 +10,14 @@ suite('CountersLambdaClient', ()=> {
     if (lambdaConfig.getAsNullableString("connection.protocol") != "aws")
         return;
 
-    let client: CountersLambdaClientV1;
-    let fixture: CountersClientFixtureV1;
+    let client: PerfMonLambdaClientV1;
+    let fixture: PerfMonClientFixtureV1;
 
     setup((done) => {
-        client = new CountersLambdaClientV1();
+        client = new PerfMonLambdaClientV1();
         client.configure(lambdaConfig);
 
-        fixture = new CountersClientFixtureV1(client);
+        fixture = new PerfMonClientFixtureV1(client);
 
         client.open(null, done);
     });

@@ -1,3 +1,3 @@
-export * from './counters';
+export * from './perfmon';
 export * from './version1';
-export { CountersClientFactory } from './build/CountersClientFactory';
+export { PerfMonClientFactory } from './build/PerfMonClientFactory';

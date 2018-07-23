@@ -10,9 +10,8 @@ import { SenecaInstance } from 'pip-services-net-node';
 import { PerfMonMemoryPersistence } from 'pip-services-perfmon-node';
 import { PerfMonController } from 'pip-services-perfmon-node';
 import { PerfMonSenecaServiceV1 } from 'pip-services-perfmon-node';
-import { IPerfMonClientV1 } from '../../src/version1/IPerfMonClientV1';
-import { PerfMonSenecaClientV1 } from '../../src/version1/PerfMonSenecaClientV1';
-import { PerfMonClientFixtureV1 } from './PerfMonClientFixtureV1';
+import { SenecaPerfMon } from '../../src/perfmon/SenecaPerfmon';
+import { PerfMonFixture } from './PerfMonFixture';
 
 let senecaConfig = ConfigParams.fromTuples(
     "connection.protocol", "none"
@@ -20,11 +19,11 @@ let senecaConfig = ConfigParams.fromTuples(
 
 suite('PerfMonSenecaClient', () => {
     let service: PerfMonSenecaServiceV1;
-    let client: PerfMonSenecaClientV1;
-    let fixture: PerfMonClientFixtureV1;
+    let logger: SenecaPerfMon;
+    let fixture: PerfMonFixture;
 
     suiteSetup((done) => {
-        let logger = new ConsoleLogger();
+        let consolePerfMon = new ConsoleLogger();
         let persistence = new PerfMonMemoryPersistence();
         let controller = new PerfMonController();
 
@@ -33,7 +32,7 @@ suite('PerfMonSenecaClient', () => {
         let seneca = new SenecaInstance();
 
         let references: References = References.fromTuples(
-            new Descriptor('pip-services-commons', 'logger', 'console', 'default', '1.0'), logger,
+            new Descriptor('pip-services-commons', 'logger', 'console', 'default', '1.0'), consolePerfMon,
             new Descriptor('pip-services-net', 'seneca', 'instance', 'default', '1.0'), seneca,
             new Descriptor('pip-services-perfmon', 'persistence', 'memory', 'default', '1.0'), persistence,
             new Descriptor('pip-services-perfmon', 'controller', 'default', 'default', '1.0'), controller,
@@ -43,24 +42,24 @@ suite('PerfMonSenecaClient', () => {
         controller.setReferences(references);
         service.setReferences(references);
 
-        client = new PerfMonSenecaClientV1();
-        client.configure(senecaConfig);
-        client.setReferences(references);
+        logger = new SenecaPerfMon();
+        logger.configure(senecaConfig);
+        logger.setReferences(references);
 
-        fixture = new PerfMonClientFixtureV1(client);
+        fixture = new PerfMonFixture(logger, controller);
 
         service.open(null, (err) => {
-            client.open(null, done);
+            logger.open(null, done);
         });
     });
 
     suiteTeardown((done) => {
-        client.close(null);
+        logger.close(null);
         service.close(null, done);
     });
 
-    test('CRUD Operations', (done) => {
-        fixture.testCrudOperations(done);
+    test('Simple perfmon', (done) => {
+        fixture.testSimplePerfMon(done);
     });
 
 });

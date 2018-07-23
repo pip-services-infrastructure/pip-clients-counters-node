@@ -1,8 +1,8 @@
 {
-    "name": "pip-clients-counters-node",
+    "name": "pip-clients-perfmon-node",
     "version": "1.0.0",
     "author": "Conceptual Vision Consulting LLC",
-    "description": "Node.js client sdk for pip-services-counters microservice",
+    "description": "Node.js client sdk for pip-services-perfmon microservice",
     "contributors": [
         {
             "name": "Sergey Seroukhov",
@@ -12,16 +12,17 @@
     "main": "./obj/src/index.js",
     "typings": "./obj/src/index.d.ts",
     "keywords": [
-        "pip.services", 
-        "counters",
+        "pip.services",
+        "perfmon",
+        "counter",
         "microservice",
         "client",
         "sdk"
     ],
     "noAnalyze": true,
-    "repository" : {
+    "repository": {
         "type": "git",
-        "url": "ssh://git@github.com:pip-services-infrastructure/pip-clients-counters-node.git"
+        "url": "ssh://git@github.com:pip-services-infrastructure/pip-clients-perfmon-node.git"
     },
     "license": "MIT",
     "engines": {
@@ -55,6 +56,6 @@
         "matcha": "*",
         "mocha": "*",
         "aws-sdk": "*",
-        "pip-services-counters-node": "git+ssh://git@github.com:pip-services-infrastructure/pip-services-counters-node.git"
+        "pip-services-perfmon-node": "git+ssh://git@github.com:pip-services-infrastructure/pip-services-perfmon-node.git"
     }
 }

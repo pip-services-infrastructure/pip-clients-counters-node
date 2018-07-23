@@ -2,14 +2,14 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var CounterV1_1 = require("./CounterV1");
 exports.CounterV1 = CounterV1_1.CounterV1;
-var CountersHttpClientV1_1 = require("./CountersHttpClientV1");
-exports.CountersHttpClientV1 = CountersHttpClientV1_1.CountersHttpClientV1;
-var CountersLambdaClientV1_1 = require("./CountersLambdaClientV1");
-exports.CountersLambdaClientV1 = CountersLambdaClientV1_1.CountersLambdaClientV1;
-var CountersSenecaClientV1_1 = require("./CountersSenecaClientV1");
-exports.CountersSenecaClientV1 = CountersSenecaClientV1_1.CountersSenecaClientV1;
-var CountersDirectClientV1_1 = require("./CountersDirectClientV1");
-exports.CountersDirectClientV1 = CountersDirectClientV1_1.CountersDirectClientV1;
-var CountersNullClientV1_1 = require("./CountersNullClientV1");
-exports.CountersNullClientV1 = CountersNullClientV1_1.CountersNullClientV1;
+var PerfMonHttpClientV1_1 = require("./PerfMonHttpClientV1");
+exports.PerfMonHttpClientV1 = PerfMonHttpClientV1_1.PerfMonHttpClientV1;
+var PerfMonLambdaClientV1_1 = require("./PerfMonLambdaClientV1");
+exports.PerfMonLambdaClientV1 = PerfMonLambdaClientV1_1.PerfMonLambdaClientV1;
+var PerfMonSenecaClientV1_1 = require("./PerfMonSenecaClientV1");
+exports.PerfMonSenecaClientV1 = PerfMonSenecaClientV1_1.PerfMonSenecaClientV1;
+var PerfMonDirectClientV1_1 = require("./PerfMonDirectClientV1");
+exports.PerfMonDirectClientV1 = PerfMonDirectClientV1_1.PerfMonDirectClientV1;
+var PerfMonNullClientV1_1 = require("./PerfMonNullClientV1");
+exports.PerfMonNullClientV1 = PerfMonNullClientV1_1.PerfMonNullClientV1;
 //# sourceMappingURL=index.js.map

@@ -1,6 +1,6 @@
-# Counters Microservice Client SDK for Node.js
+# PerfMon Microservice Client SDK for Node.js
 
-This is a Node.js client SDK for [pip-services-counters](https://github.com/pip-services-infrastructure/pip-services-counters-node) microservice.
+This is a Node.js client SDK for [pip-services-perfmon](https://github.com/pip-services-infrastructure/pip-services-perfmon-node) microservice.
 It provides an easy to use abstraction over communication protocols:
 
 * HTTP/REST client
@@ -23,7 +23,7 @@ Add dependency to the client SDK into **package.json** file of your project
     ...
     "dependencies": {
         ....
-        "pip-clients-counters-node": "^1.0.*",
+        "pip-clients-perfmon-node": "^1.0.*",
         ...
     }
 }
@@ -42,7 +42,7 @@ npm update
 
 Inside your code get the reference to the client SDK
 ```javascript
-var sdk = new require('pip-clients-counters-node');
+var sdk = new require('pip-clients-perfmon-node');
 ```
 
 Define client configuration parameters that match configuration of the microservice external API
@@ -60,7 +60,7 @@ var config = {
 Instantiate the client and open connection to the microservice
 ```javascript
 // Create the client instance
-var client = sdk.CountersHttpClientV1(config);
+var client = sdk.PerfMonHttpClientV1(config);
 
 // Connect to the microservice
 client.open(null, function(err) {

@@ -26,7 +26,7 @@ To work with the client SDK add dependency into package.json file:
     ...
     "dependencies": {
         ....
-        "pip-clients-counters-node": "^1.0.0",
+        "pip-clients-perfmon-node": "^1.0.0",
         ...
     }
 }
@@ -48,7 +48,7 @@ This is a simple example on how to work with the microservice using REST client:
 
 ```javascript
 // Get Client SDK for Version 1 
-var sdk = new require('pip-clients-counters-node');
+var sdk = new require('pip-clients-perfmon-node');
 
 // Client configuration
 var config = {
