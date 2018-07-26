@@ -8,4 +8,4 @@ class SenecaPerfMon extends AbstractPerfMon_1.AbstractPerfMon {
     }
 }
 exports.SenecaPerfMon = SenecaPerfMon;
-//# sourceMappingURL=SenecaPerfMon.js.map
+//# sourceMappingURL=SenecaPerfmon.js.map

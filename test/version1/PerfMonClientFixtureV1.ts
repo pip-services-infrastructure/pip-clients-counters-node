@@ -18,7 +18,7 @@ export class PerfMonClientFixtureV1 {
     testCrudOperations(done) {
          async.series([
             (callback) => {
-                let counter = new CounterV1("counter1", CounterType.Statistics);
+                let counter = new CounterV1("counter1", "source1", CounterType.Statistics, 5, 2, 2, 5, 3.5);
                 counter.count = 1;
                 counter.max = 10;
                 counter.min = 1;
@@ -35,13 +35,13 @@ export class PerfMonClientFixtureV1 {
                 );
             },
             (callback) => {
-                let counter1 = new CounterV1("counter1", CounterType.Statistics);
+                let counter1 = new CounterV1("counter1", "source1", CounterType.Statistics, 5, 2, 2, 5, 3.5);
                 counter1.count = 2;
                 counter1.max = 7;
                 counter1.min = 0;
                 counter1.average = 5;
 
-                let counter2 = new CounterV1("counter2", CounterType.Statistics);
+                let counter2 = new CounterV1("counter2", "source2", CounterType.Statistics, 5, 2, 2, 5, 3.5);
                 counter2.count = 1;
 
                 this._client.writeCounters(

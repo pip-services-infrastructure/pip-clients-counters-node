@@ -22,9 +22,9 @@ class PerfMonClientFactory extends pip_services_commons_node_2.Factory {
     }
 }
 PerfMonClientFactory.Descriptor = new pip_services_commons_node_1.Descriptor('pip-services-perfmon', 'factory', 'default', 'default', '1.0');
-PerfMonClientFactory.DirectPerfMonDescriptor = new pip_services_commons_node_1.Descriptor('pip-services-perfmon', 'perfmon', 'direct', 'default', '1.0');
-PerfMonClientFactory.HttpPerfMonDescriptor = new pip_services_commons_node_1.Descriptor('pip-services-perfmon', 'perfmon', 'http', 'default', '1.0');
-PerfMonClientFactory.SenecaPerfMonDescriptor = new pip_services_commons_node_1.Descriptor('pip-services-perfmon', 'perfmon', 'seneca', 'default', '1.0');
+PerfMonClientFactory.DirectPerfMonDescriptor = new pip_services_commons_node_1.Descriptor('pip-services-perfmon', 'counters', 'direct', 'default', '1.0');
+PerfMonClientFactory.HttpPerfMonDescriptor = new pip_services_commons_node_1.Descriptor('pip-services-perfmon', 'counters', 'http', 'default', '1.0');
+PerfMonClientFactory.SenecaPerfMonDescriptor = new pip_services_commons_node_1.Descriptor('pip-services-perfmon', 'counters', 'seneca', 'default', '1.0');
 PerfMonClientFactory.NullClientV1Descriptor = new pip_services_commons_node_1.Descriptor('pip-services-perfmon', 'client', 'null', 'default', '1.0');
 PerfMonClientFactory.DirectClientV1Descriptor = new pip_services_commons_node_1.Descriptor('pip-services-perfmon', 'client', 'direct', 'default', '1.0');
 PerfMonClientFactory.HttpClientV1Descriptor = new pip_services_commons_node_1.Descriptor('pip-services-perfmon', 'client', 'http', 'default', '1.0');

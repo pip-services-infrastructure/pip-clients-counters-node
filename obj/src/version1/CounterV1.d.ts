@@ -1,7 +1,8 @@
 import { CounterType } from 'pip-services-commons-node';
 export declare class CounterV1 {
-    constructor(name: string, type: CounterType);
+    constructor(name: string, source: string, type: CounterType, last: number, count: number, min: number, max: number, average: number);
     name: string;
+    source: string;
     type: CounterType;
     last: number;
     count: number;
