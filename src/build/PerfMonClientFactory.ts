@@ -12,9 +12,9 @@ import { PerfMonSenecaClientV1 } from '../version1/PerfMonSenecaClientV1';
 
 export class PerfMonClientFactory extends Factory {
 	public static Descriptor: Descriptor = new Descriptor('pip-services-perfmon', 'factory', 'default', 'default', '1.0');
-	public static DirectPerfMonDescriptor = new Descriptor('pip-services-perfmon', 'perfmon', 'direct', 'default', '1.0');
-	public static HttpPerfMonDescriptor = new Descriptor('pip-services-perfmon', 'perfmon', 'http', 'default', '1.0');
-	public static SenecaPerfMonDescriptor = new Descriptor('pip-services-perfmon', 'perfmon', 'seneca', 'default', '1.0');
+	public static DirectPerfMonDescriptor = new Descriptor('pip-services-perfmon', 'counters', 'direct', 'default', '1.0');
+	public static HttpPerfMonDescriptor = new Descriptor('pip-services-perfmon', 'counters', 'http', 'default', '1.0');
+	public static SenecaPerfMonDescriptor = new Descriptor('pip-services-perfmon', 'counters', 'seneca', 'default', '1.0');
 	public static NullClientV1Descriptor = new Descriptor('pip-services-perfmon', 'client', 'null', 'default', '1.0');
 	public static DirectClientV1Descriptor = new Descriptor('pip-services-perfmon', 'client', 'direct', 'default', '1.0');
 	public static HttpClientV1Descriptor = new Descriptor('pip-services-perfmon', 'client', 'http', 'default', '1.0');
