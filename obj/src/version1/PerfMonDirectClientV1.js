@@ -8,14 +8,14 @@ class PerfMonDirectClientV1 extends pip_services_net_node_1.DirectClient {
         this._dependencyResolver.put('controller', new pip_services_commons_node_1.Descriptor("pip-services-perfmon", "controller", "*", "*", "*"));
     }
     readCounters(correlationId, filter, paging, callback) {
-        let timing = this.instrument(correlationId, 'perfmon.read_counters');
+        let timing = this.instrument(correlationId, 'counters.read_counters');
         this._controller.readCounters(correlationId, filter, paging, (err, page) => {
             timing.endTiming();
             callback(err, page);
         });
     }
     writeCounter(correlationId, counter, callback) {
-        let timing = this.instrument(correlationId, 'perfmon.write_counter');
+        let timing = this.instrument(correlationId, 'counters.write_counter');
         this._controller.writeCounter(correlationId, counter, (err, counter) => {
             timing.endTiming();
             if (callback)
@@ -23,7 +23,7 @@ class PerfMonDirectClientV1 extends pip_services_net_node_1.DirectClient {
         });
     }
     writeCounters(correlationId, counters, callback) {
-        let timing = this.instrument(correlationId, 'perfmon.write_counters');
+        let timing = this.instrument(correlationId, 'counters.write_counters');
         this._controller.writeCounters(correlationId, counters, (err) => {
             timing.endTiming();
             if (callback)
@@ -31,7 +31,7 @@ class PerfMonDirectClientV1 extends pip_services_net_node_1.DirectClient {
         });
     }
     clear(correlationId, callback) {
-        let timing = this.instrument(correlationId, 'perfmon.clear');
+        let timing = this.instrument(correlationId, 'counters.clear');
         this._controller.clear(correlationId, (err) => {
             timing.endTiming();
             if (callback)

@@ -4,7 +4,7 @@ const pip_services_commons_node_1 = require("pip-services-commons-node");
 const pip_services_aws_node_1 = require("pip-services-aws-node");
 class PerfMonLambdaClientV1 extends pip_services_aws_node_1.CommandableLambdaClient {
     constructor(config) {
-        super('perfmon');
+        super('counters');
         if (config != null)
             this.configure(pip_services_commons_node_1.ConfigParams.fromValue(config));
     }

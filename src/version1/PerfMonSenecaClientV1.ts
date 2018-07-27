@@ -11,7 +11,7 @@ import { IPerfMonClientV1 } from './IPerfMonClientV1';
 export class PerfMonSenecaClientV1 extends CommandableSenecaClient implements IPerfMonClientV1 {
 
     constructor(config?: any) {
-        super('perfmon');
+        super('counters');
 
         if (config != null)
             this.configure(ConfigParams.fromValue(config));

@@ -18,7 +18,7 @@ export class PerfMonDirectClientV1 extends DirectClient<any> implements IPerfMon
 
     public readCounters(correlationId: string, filter: FilterParams, paging: PagingParams, 
         callback: (err: any, page: DataPage<CounterV1>) => void): void {
-        let timing = this.instrument(correlationId, 'perfmon.read_counters');
+        let timing = this.instrument(correlationId, 'counters.read_counters');
         this._controller.readCounters(correlationId, filter, paging, (err, page) => {
             timing.endTiming();
             callback(err, page);
@@ -27,7 +27,7 @@ export class PerfMonDirectClientV1 extends DirectClient<any> implements IPerfMon
 
     public writeCounter(correlationId: string, counter: CounterV1, 
         callback?: (err: any, counter: CounterV1) => void): void {
-        let timing = this.instrument(correlationId, 'perfmon.write_counter');
+        let timing = this.instrument(correlationId, 'counters.write_counter');
         this._controller.writeCounter(correlationId, counter, (err, counter) => {
             timing.endTiming();
             if (callback) callback(err, counter);
@@ -36,7 +36,7 @@ export class PerfMonDirectClientV1 extends DirectClient<any> implements IPerfMon
 
     public writeCounters(correlationId: string, counters: CounterV1[], 
         callback?: (err: any) => void): void {
-        let timing = this.instrument(correlationId, 'perfmon.write_counters');
+        let timing = this.instrument(correlationId, 'counters.write_counters');
         this._controller.writeCounters(correlationId, counters, (err) => {
             timing.endTiming();
             if (callback) callback(err);
@@ -44,7 +44,7 @@ export class PerfMonDirectClientV1 extends DirectClient<any> implements IPerfMon
     }
 
     public clear(correlationId: string, callback?: (err: any) => void): void {
-        let timing = this.instrument(correlationId, 'perfmon.clear');
+        let timing = this.instrument(correlationId, 'counters.clear');
         this._controller.clear(correlationId, (err) => {
             timing.endTiming();
             if (callback) callback(err);
