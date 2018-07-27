@@ -1,3 +1,3 @@
-export { DirectPerfMon } from './DirectPerfmon';
-export { HttpPerfMon } from './HttpPerfmon';
-export { SenecaPerfMon } from './SenecaPerfmon';
+export { DirectPerfMon } from './DirectPerfMon';
+export { HttpPerfMon } from './HttpPerfMon';
+export { SenecaPerfMon } from './SenecaPerfMon';

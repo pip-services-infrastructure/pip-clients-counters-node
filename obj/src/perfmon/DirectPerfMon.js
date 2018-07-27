@@ -8,4 +8,4 @@ class DirectPerfMon extends AbstractPerfMon_1.AbstractPerfMon {
     }
 }
 exports.DirectPerfMon = DirectPerfMon;
-//# sourceMappingURL=DirectPerfmon.js.map
+//# sourceMappingURL=DirectPerfMon.js.map

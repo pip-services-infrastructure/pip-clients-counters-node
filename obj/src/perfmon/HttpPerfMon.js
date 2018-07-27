@@ -8,4 +8,4 @@ class HttpPerfMon extends AbstractPerfMon_1.AbstractPerfMon {
     }
 }
 exports.HttpPerfMon = HttpPerfMon;
-//# sourceMappingURL=HttpPerfmon.js.map
+//# sourceMappingURL=HttpPerfMon.js.map

@@ -1,9 +1,9 @@
 import { Descriptor } from 'pip-services-commons-node';
 import { Factory } from 'pip-services-commons-node';
 
-import { DirectPerfMon } from '../perfmon/DirectPerfmon';
-import { HttpPerfMon } from '../perfmon/HttpPerfmon';
-import { SenecaPerfMon } from '../perfmon/SenecaPerfmon';
+import { DirectPerfMon } from '../perfmon/DirectPerfMon';
+import { HttpPerfMon } from '../perfmon/HttpPerfMon';
+import { SenecaPerfMon } from '../perfmon/SenecaPerfMon';
 
 import { PerfMonNullClientV1 } from '../version1/PerfMonNullClientV1';
 import { PerfMonDirectClientV1 } from '../version1/PerfMonDirectClientV1';

@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const pip_services_commons_node_1 = require("pip-services-commons-node");
 const pip_services_commons_node_2 = require("pip-services-commons-node");
-const DirectPerfmon_1 = require("../perfmon/DirectPerfmon");
-const HttpPerfmon_1 = require("../perfmon/HttpPerfmon");
-const SenecaPerfmon_1 = require("../perfmon/SenecaPerfmon");
+const DirectPerfMon_1 = require("../perfmon/DirectPerfMon");
+const HttpPerfMon_1 = require("../perfmon/HttpPerfMon");
+const SenecaPerfMon_1 = require("../perfmon/SenecaPerfMon");
 const PerfMonNullClientV1_1 = require("../version1/PerfMonNullClientV1");
 const PerfMonDirectClientV1_1 = require("../version1/PerfMonDirectClientV1");
 const PerfMonHttpClientV1_1 = require("../version1/PerfMonHttpClientV1");
@@ -12,9 +12,9 @@ const PerfMonSenecaClientV1_1 = require("../version1/PerfMonSenecaClientV1");
 class PerfMonClientFactory extends pip_services_commons_node_2.Factory {
     constructor() {
         super();
-        this.registerAsType(PerfMonClientFactory.DirectPerfMonDescriptor, DirectPerfmon_1.DirectPerfMon);
-        this.registerAsType(PerfMonClientFactory.HttpPerfMonDescriptor, HttpPerfmon_1.HttpPerfMon);
-        this.registerAsType(PerfMonClientFactory.SenecaPerfMonDescriptor, SenecaPerfmon_1.SenecaPerfMon);
+        this.registerAsType(PerfMonClientFactory.DirectPerfMonDescriptor, DirectPerfMon_1.DirectPerfMon);
+        this.registerAsType(PerfMonClientFactory.HttpPerfMonDescriptor, HttpPerfMon_1.HttpPerfMon);
+        this.registerAsType(PerfMonClientFactory.SenecaPerfMonDescriptor, SenecaPerfMon_1.SenecaPerfMon);
         this.registerAsType(PerfMonClientFactory.NullClientV1Descriptor, PerfMonNullClientV1_1.PerfMonNullClientV1);
         this.registerAsType(PerfMonClientFactory.DirectClientV1Descriptor, PerfMonDirectClientV1_1.PerfMonDirectClientV1);
         this.registerAsType(PerfMonClientFactory.HttpClientV1Descriptor, PerfMonHttpClientV1_1.PerfMonHttpClientV1);

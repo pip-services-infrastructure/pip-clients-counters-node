@@ -6,7 +6,7 @@ import { DataPage } from 'pip-services-commons-node';
 import { DirectClient } from 'pip-services-net-node';
 
 import { IPerfMonClientV1 } from './IPerfMonClientV1';
-//import { ICountersController } from 'pip-services-perfmon-node';
+import { IPerfMonController } from 'pip-services-perfmon-node';
 import { CounterV1 } from './CounterV1';
 
 export class PerfMonDirectClientV1 extends DirectClient<any> implements IPerfMonClientV1 {
