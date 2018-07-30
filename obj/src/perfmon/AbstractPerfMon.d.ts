@@ -7,6 +7,7 @@ import { CounterV1 } from '../version1/CounterV1';
 import { IPerfMonClientV1 } from '../version1/IPerfMonClientV1';
 export declare abstract class AbstractPerfMon extends CachedCounters implements IReferenceable, IOpenable {
     protected _client: IPerfMonClientV1;
+    protected _source: string;
     constructor(client: IPerfMonClientV1);
     configure(config: ConfigParams): void;
     setReferences(references: IReferences): void;
