@@ -10,6 +10,8 @@ import { Counter } from 'pip-services-commons-node';
 import { CachedCounters } from 'pip-services-commons-node';
 import { Descriptor } from 'pip-services-commons-node';
 import { ContextInfo } from 'pip-services-commons-node';
+import { CompositeLogger } from 'pip-services-commons-node'
+import { CompositeCounters } from 'pip-services-commons-node'
 
 import { CounterV1 } from '../version1/CounterV1';
 import { IPerfMonClientV1 } from '../version1/IPerfMonClientV1';
@@ -32,6 +34,8 @@ export abstract class AbstractPerfMon extends CachedCounters implements IReferen
 	
     public setReferences(references: IReferences): void {
         (this._client as any).setReferences(references);
+        (this._client as any)._logger = new CompositeLogger();
+        (this._client as any)._counters = new CompositeCounters();
         let contextInfo = references.getOneOptional<ContextInfo>(
             new Descriptor("pip-services", "context-info", "default", "*", "1.0"));
         if (contextInfo != null && this._source == null)

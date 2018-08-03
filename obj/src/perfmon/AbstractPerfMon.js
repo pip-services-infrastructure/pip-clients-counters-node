@@ -4,6 +4,8 @@ let _ = require('lodash');
 let os = require('os');
 const pip_services_commons_node_1 = require("pip-services-commons-node");
 const pip_services_commons_node_2 = require("pip-services-commons-node");
+const pip_services_commons_node_3 = require("pip-services-commons-node");
+const pip_services_commons_node_4 = require("pip-services-commons-node");
 class AbstractPerfMon extends pip_services_commons_node_1.CachedCounters {
     constructor(client) {
         super();
@@ -16,6 +18,8 @@ class AbstractPerfMon extends pip_services_commons_node_1.CachedCounters {
     }
     setReferences(references) {
         this._client.setReferences(references);
+        this._client._logger = new pip_services_commons_node_3.CompositeLogger();
+        this._client._counters = new pip_services_commons_node_4.CompositeCounters();
         let contextInfo = references.getOneOptional(new pip_services_commons_node_2.Descriptor("pip-services", "context-info", "default", "*", "1.0"));
         if (contextInfo != null && this._source == null)
             this._source = contextInfo.name;

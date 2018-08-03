@@ -2,10 +2,17 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const pip_services_commons_node_1 = require("pip-services-commons-node");
 const pip_services_net_node_1 = require("pip-services-net-node");
+const pip_services_commons_node_2 = require("pip-services-commons-node");
+const pip_services_commons_node_3 = require("pip-services-commons-node");
 class PerfMonDirectClientV1 extends pip_services_net_node_1.DirectClient {
     constructor() {
         super();
         this._dependencyResolver.put('controller', new pip_services_commons_node_1.Descriptor("pip-services-perfmon", "controller", "*", "*", "*"));
+    }
+    setReferences(references) {
+        super.setReferences(references);
+        this._logger = new pip_services_commons_node_2.CompositeLogger();
+        this._counters = new pip_services_commons_node_3.CompositeCounters();
     }
     readCounters(correlationId, filter, paging, callback) {
         let timing = this.instrument(correlationId, 'counters.read_counters');

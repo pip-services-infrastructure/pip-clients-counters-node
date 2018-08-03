@@ -4,6 +4,8 @@ import { FilterParams } from 'pip-services-commons-node';
 import { PagingParams } from 'pip-services-commons-node';
 import { DataPage } from 'pip-services-commons-node';
 import { CommandableHttpClient } from 'pip-services-net-node';
+import { CompositeLogger } from 'pip-services-commons-node'
+import { CompositeCounters } from 'pip-services-commons-node'
 
 import { CounterV1 } from './CounterV1';
 import { IPerfMonClientV1 } from './IPerfMonClientV1';
@@ -15,6 +17,12 @@ export class PerfMonHttpClientV1 extends CommandableHttpClient implements IPerfM
 
         if (config != null)
             this.configure(ConfigParams.fromValue(config));
+    }
+
+    public setReferences(references: IReferences) {
+        super.setReferences(references);
+        this._logger = new CompositeLogger();
+        this._counters = new CompositeCounters();
     }
         
     public readCounters(correlationId: string, filter: FilterParams, paging: PagingParams,
