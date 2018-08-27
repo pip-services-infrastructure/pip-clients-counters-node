@@ -1,5 +1,5 @@
 import { Descriptor } from 'pip-services-commons-node';
-import { Factory } from 'pip-services-commons-node';
+import { Factory } from 'pip-services-components-node';
 
 import { DirectPerfMon } from '../perfmon/DirectPerfMon';
 import { HttpPerfMon } from '../perfmon/HttpPerfMon';

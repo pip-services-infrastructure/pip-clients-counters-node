@@ -3,9 +3,9 @@ import { IReferences } from 'pip-services-commons-node';
 import { FilterParams } from 'pip-services-commons-node';
 import { PagingParams } from 'pip-services-commons-node';
 import { DataPage } from 'pip-services-commons-node';
-import { CommandableHttpClient } from 'pip-services-net-node';
-import { CompositeLogger } from 'pip-services-commons-node'
-import { CompositeCounters } from 'pip-services-commons-node'
+import { CommandableHttpClient } from 'pip-services-rpc-node';
+import { CompositeLogger } from 'pip-services-components-node'
+import { CompositeCounters } from 'pip-services-components-node'
 
 import { CounterV1 } from './CounterV1';
 import { IPerfMonClientV1 } from './IPerfMonClientV1';

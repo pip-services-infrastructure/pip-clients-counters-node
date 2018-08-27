@@ -2,7 +2,7 @@ import { ConfigParams } from 'pip-services-commons-node';
 import { IReferences } from 'pip-services-commons-node';
 import { IReferenceable } from 'pip-services-commons-node';
 import { IOpenable } from 'pip-services-commons-node';
-import { CachedCounters } from 'pip-services-commons-node';
+import { CachedCounters } from 'pip-services-components-node';
 import { CounterV1 } from '../version1/CounterV1';
 import { IPerfMonClientV1 } from '../version1/IPerfMonClientV1';
 export declare abstract class AbstractPerfMon extends CachedCounters implements IReferenceable, IOpenable {
@@ -11,7 +11,7 @@ export declare abstract class AbstractPerfMon extends CachedCounters implements 
     constructor(client: IPerfMonClientV1);
     configure(config: ConfigParams): void;
     setReferences(references: IReferences): void;
-    isOpened(): boolean;
+    isOpen(): boolean;
     open(correlationId: string, callback?: (err: any) => void): void;
     close(correlationId: string, callback?: (err: any) => void): void;
     save(counters: CounterV1[]): void;

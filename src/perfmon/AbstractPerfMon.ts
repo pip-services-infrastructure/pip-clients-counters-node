@@ -1,17 +1,18 @@
 let _ = require('lodash');
 let os = require('os');
 
-import { ConfigParams, CounterType } from 'pip-services-commons-node';
+import { ConfigParams } from 'pip-services-commons-node';
+import { CounterType } from 'pip-services-components-node';
 import { IConfigurable } from 'pip-services-commons-node';
 import { IReferences } from 'pip-services-commons-node';
 import { IReferenceable } from 'pip-services-commons-node';
 import { IOpenable } from 'pip-services-commons-node';
-import { Counter } from 'pip-services-commons-node';
-import { CachedCounters } from 'pip-services-commons-node';
+import { Counter } from 'pip-services-components-node';
+import { CachedCounters } from 'pip-services-components-node';
 import { Descriptor } from 'pip-services-commons-node';
-import { ContextInfo } from 'pip-services-commons-node';
-import { CompositeLogger } from 'pip-services-commons-node'
-import { CompositeCounters } from 'pip-services-commons-node'
+import { ContextInfo } from 'pip-services-components-node';
+import { CompositeLogger } from 'pip-services-components-node'
+import { CompositeCounters } from 'pip-services-components-node'
 
 import { CounterV1 } from '../version1/CounterV1';
 import { IPerfMonClientV1 } from '../version1/IPerfMonClientV1';
@@ -42,7 +43,7 @@ export abstract class AbstractPerfMon extends CachedCounters implements IReferen
             this._source = contextInfo.name;
     }
 
-    public isOpened(): boolean {
+    public isOpen(): boolean {
         return (this._client as any).isOpened();
     }
 

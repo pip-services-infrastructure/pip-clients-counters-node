@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const pip_services_commons_node_1 = require("pip-services-commons-node");
 const pip_services_aws_node_1 = require("pip-services-aws-node");
-const pip_services_commons_node_2 = require("pip-services-commons-node");
-const pip_services_commons_node_3 = require("pip-services-commons-node");
+const pip_services_components_node_1 = require("pip-services-components-node");
+const pip_services_components_node_2 = require("pip-services-components-node");
 class PerfMonLambdaClientV1 extends pip_services_aws_node_1.CommandableLambdaClient {
     constructor(config) {
         super('counters');
@@ -12,8 +12,8 @@ class PerfMonLambdaClientV1 extends pip_services_aws_node_1.CommandableLambdaCli
     }
     setReferences(references) {
         super.setReferences(references);
-        this._logger = new pip_services_commons_node_2.CompositeLogger();
-        this._counters = new pip_services_commons_node_3.CompositeCounters();
+        this._logger = new pip_services_components_node_1.CompositeLogger();
+        this._counters = new pip_services_components_node_2.CompositeCounters();
     }
     readCounters(correlationId, filter, paging, callback) {
         this.callCommand('read_counters', correlationId, {

@@ -3,9 +3,9 @@ import { Descriptor } from 'pip-services-commons-node';
 import { FilterParams } from 'pip-services-commons-node';
 import { PagingParams } from 'pip-services-commons-node';
 import { DataPage } from 'pip-services-commons-node';
-import { DirectClient } from 'pip-services-net-node';
-import { CompositeLogger } from 'pip-services-commons-node'
-import { CompositeCounters } from 'pip-services-commons-node'
+import { DirectClient } from 'pip-services-rpc-node';
+import { CompositeLogger } from 'pip-services-components-node'
+import { CompositeCounters } from 'pip-services-components-node'
 
 import { IPerfMonClientV1 } from './IPerfMonClientV1';
 import { IPerfMonController } from 'pip-services-perfmon-node';

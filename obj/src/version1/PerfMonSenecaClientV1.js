@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const pip_services_commons_node_1 = require("pip-services-commons-node");
-const pip_services_net_node_1 = require("pip-services-net-node");
-const pip_services_commons_node_2 = require("pip-services-commons-node");
-const pip_services_commons_node_3 = require("pip-services-commons-node");
-class PerfMonSenecaClientV1 extends pip_services_net_node_1.CommandableSenecaClient {
+const pip_services_seneca_node_1 = require("pip-services-seneca-node");
+const pip_services_components_node_1 = require("pip-services-components-node");
+const pip_services_components_node_2 = require("pip-services-components-node");
+class PerfMonSenecaClientV1 extends pip_services_seneca_node_1.CommandableSenecaClient {
     constructor(config) {
         super('counters');
         if (config != null)
@@ -12,8 +12,8 @@ class PerfMonSenecaClientV1 extends pip_services_net_node_1.CommandableSenecaCli
     }
     setReferences(references) {
         super.setReferences(references);
-        this._logger = new pip_services_commons_node_2.CompositeLogger();
-        this._counters = new pip_services_commons_node_3.CompositeCounters();
+        this._logger = new pip_services_components_node_1.CompositeLogger();
+        this._counters = new pip_services_components_node_2.CompositeCounters();
     }
     readCounters(correlationId, filter, paging, callback) {
         this.callCommand('read_counters', correlationId, {

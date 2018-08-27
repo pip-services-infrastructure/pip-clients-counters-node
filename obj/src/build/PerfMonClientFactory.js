@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const pip_services_commons_node_1 = require("pip-services-commons-node");
-const pip_services_commons_node_2 = require("pip-services-commons-node");
+const pip_services_components_node_1 = require("pip-services-components-node");
 const DirectPerfMon_1 = require("../perfmon/DirectPerfMon");
 const HttpPerfMon_1 = require("../perfmon/HttpPerfMon");
 const SenecaPerfMon_1 = require("../perfmon/SenecaPerfMon");
@@ -9,7 +9,7 @@ const PerfMonNullClientV1_1 = require("../version1/PerfMonNullClientV1");
 const PerfMonDirectClientV1_1 = require("../version1/PerfMonDirectClientV1");
 const PerfMonHttpClientV1_1 = require("../version1/PerfMonHttpClientV1");
 const PerfMonSenecaClientV1_1 = require("../version1/PerfMonSenecaClientV1");
-class PerfMonClientFactory extends pip_services_commons_node_2.Factory {
+class PerfMonClientFactory extends pip_services_components_node_1.Factory {
     constructor() {
         super();
         this.registerAsType(PerfMonClientFactory.DirectPerfMonDescriptor, DirectPerfMon_1.DirectPerfMon);

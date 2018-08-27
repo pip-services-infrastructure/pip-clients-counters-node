@@ -2,7 +2,7 @@ let _ = require('lodash');
 let async = require('async');
 let assert = require('chai').assert;
 
-import { CounterType } from 'pip-services-commons-node';
+import { CounterType } from 'pip-services-components-node';
 import { FilterParams } from 'pip-services-commons-node';
 
 import { CounterV1 } from '../../src/version1/CounterV1';
