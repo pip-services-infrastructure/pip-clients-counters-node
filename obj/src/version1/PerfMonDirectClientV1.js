@@ -1,18 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const pip_services_commons_node_1 = require("pip-services-commons-node");
-const pip_services_rpc_node_1 = require("pip-services-rpc-node");
-const pip_services_components_node_1 = require("pip-services-components-node");
-const pip_services_components_node_2 = require("pip-services-components-node");
-class PerfMonDirectClientV1 extends pip_services_rpc_node_1.DirectClient {
+const pip_services3_commons_node_1 = require("pip-services3-commons-node");
+const pip_services3_rpc_node_1 = require("pip-services3-rpc-node");
+const pip_services3_components_node_1 = require("pip-services3-components-node");
+const pip_services3_components_node_2 = require("pip-services3-components-node");
+class PerfMonDirectClientV1 extends pip_services3_rpc_node_1.DirectClient {
     constructor() {
         super();
-        this._dependencyResolver.put('controller', new pip_services_commons_node_1.Descriptor("pip-services-perfmon", "controller", "*", "*", "*"));
+        this._dependencyResolver.put('controller', new pip_services3_commons_node_1.Descriptor("pip-services-perfmon", "controller", "*", "*", "*"));
     }
     setReferences(references) {
         super.setReferences(references);
-        this._logger = new pip_services_components_node_1.CompositeLogger();
-        this._counters = new pip_services_components_node_2.CompositeCounters();
+        this._logger = new pip_services3_components_node_1.CompositeLogger();
+        this._counters = new pip_services3_components_node_2.CompositeCounters();
     }
     readCounters(correlationId, filter, paging, callback) {
         let timing = this.instrument(correlationId, 'counters.read_counters');

@@ -1,11 +1,11 @@
-import { IReferences } from 'pip-services-commons-node';
-import { Descriptor } from 'pip-services-commons-node';
-import { FilterParams } from 'pip-services-commons-node';
-import { PagingParams } from 'pip-services-commons-node';
-import { DataPage } from 'pip-services-commons-node';
-import { DirectClient } from 'pip-services-rpc-node';
-import { CompositeLogger } from 'pip-services-components-node'
-import { CompositeCounters } from 'pip-services-components-node'
+import { IReferences } from 'pip-services3-commons-node';
+import { Descriptor } from 'pip-services3-commons-node';
+import { FilterParams } from 'pip-services3-commons-node';
+import { PagingParams } from 'pip-services3-commons-node';
+import { DataPage } from 'pip-services3-commons-node';
+import { DirectClient } from 'pip-services3-rpc-node';
+import { CompositeLogger } from 'pip-services3-components-node'
+import { CompositeCounters } from 'pip-services3-components-node'
 
 import { IPerfMonClientV1 } from './IPerfMonClientV1';
 import { IPerfMonController } from 'pip-services-perfmon-node';

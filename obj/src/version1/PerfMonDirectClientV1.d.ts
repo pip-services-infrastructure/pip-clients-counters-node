@@ -1,8 +1,8 @@
-import { IReferences } from 'pip-services-commons-node';
-import { FilterParams } from 'pip-services-commons-node';
-import { PagingParams } from 'pip-services-commons-node';
-import { DataPage } from 'pip-services-commons-node';
-import { DirectClient } from 'pip-services-rpc-node';
+import { IReferences } from 'pip-services3-commons-node';
+import { FilterParams } from 'pip-services3-commons-node';
+import { PagingParams } from 'pip-services3-commons-node';
+import { DataPage } from 'pip-services3-commons-node';
+import { DirectClient } from 'pip-services3-rpc-node';
 import { IPerfMonClientV1 } from './IPerfMonClientV1';
 import { CounterV1 } from './CounterV1';
 export declare class PerfMonDirectClientV1 extends DirectClient<any> implements IPerfMonClientV1 {

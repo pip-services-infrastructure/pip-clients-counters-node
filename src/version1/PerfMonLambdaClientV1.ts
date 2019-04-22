@@ -1,11 +1,11 @@
-import { ConfigParams } from 'pip-services-commons-node';
-import { IReferences } from 'pip-services-commons-node';
-import { FilterParams } from 'pip-services-commons-node';
-import { PagingParams } from 'pip-services-commons-node';
-import { DataPage } from 'pip-services-commons-node';
-import { CommandableLambdaClient } from 'pip-services-aws-node';
-import { CompositeLogger } from 'pip-services-components-node'
-import { CompositeCounters } from 'pip-services-components-node'
+import { ConfigParams } from 'pip-services3-commons-node';
+import { IReferences } from 'pip-services3-commons-node';
+import { FilterParams } from 'pip-services3-commons-node';
+import { PagingParams } from 'pip-services3-commons-node';
+import { DataPage } from 'pip-services3-commons-node';
+import { CommandableLambdaClient } from 'pip-services3-aws-node';
+import { CompositeLogger } from 'pip-services3-components-node'
+import { CompositeCounters } from 'pip-services3-components-node'
 
 import { CounterV1 } from './CounterV1';
 import { IPerfMonClientV1 } from './IPerfMonClientV1';

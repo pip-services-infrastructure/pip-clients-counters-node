@@ -1,19 +1,19 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const pip_services_commons_node_1 = require("pip-services-commons-node");
-const pip_services_rpc_node_1 = require("pip-services-rpc-node");
-const pip_services_components_node_1 = require("pip-services-components-node");
-const pip_services_components_node_2 = require("pip-services-components-node");
-class PerfMonHttpClientV1 extends pip_services_rpc_node_1.CommandableHttpClient {
+const pip_services3_commons_node_1 = require("pip-services3-commons-node");
+const pip_services3_rpc_node_1 = require("pip-services3-rpc-node");
+const pip_services3_components_node_1 = require("pip-services3-components-node");
+const pip_services3_components_node_2 = require("pip-services3-components-node");
+class PerfMonHttpClientV1 extends pip_services3_rpc_node_1.CommandableHttpClient {
     constructor(config) {
         super('v1/perfmon');
         if (config != null)
-            this.configure(pip_services_commons_node_1.ConfigParams.fromValue(config));
+            this.configure(pip_services3_commons_node_1.ConfigParams.fromValue(config));
     }
     setReferences(references) {
         super.setReferences(references);
-        this._logger = new pip_services_components_node_1.CompositeLogger();
-        this._counters = new pip_services_components_node_2.CompositeCounters();
+        this._logger = new pip_services3_components_node_1.CompositeLogger();
+        this._counters = new pip_services3_components_node_2.CompositeCounters();
     }
     readCounters(correlationId, filter, paging, callback) {
         this.callCommand('read_counters', correlationId, {

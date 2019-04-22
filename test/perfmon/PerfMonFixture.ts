@@ -1,7 +1,7 @@
 let assert = require('chai').assert;
 
-import { ConfigParams } from 'pip-services-commons-node';
-import { CounterType } from 'pip-services-components-node';
+import { ConfigParams } from 'pip-services3-commons-node';
+import { CounterType } from 'pip-services3-components-node';
 import { IPerfMonController } from 'pip-services-perfmon-node';
 import { AbstractPerfMon } from '../../src/perfmon/AbstractPerfMon';
 

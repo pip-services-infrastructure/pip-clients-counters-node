@@ -1,18 +1,18 @@
 let _ = require('lodash');
 let os = require('os');
 
-import { ConfigParams } from 'pip-services-commons-node';
-import { CounterType } from 'pip-services-components-node';
-import { IConfigurable } from 'pip-services-commons-node';
-import { IReferences } from 'pip-services-commons-node';
-import { IReferenceable } from 'pip-services-commons-node';
-import { IOpenable } from 'pip-services-commons-node';
-import { Counter } from 'pip-services-components-node';
-import { CachedCounters } from 'pip-services-components-node';
-import { Descriptor } from 'pip-services-commons-node';
-import { ContextInfo } from 'pip-services-components-node';
-import { CompositeLogger } from 'pip-services-components-node'
-import { CompositeCounters } from 'pip-services-components-node'
+import { ConfigParams } from 'pip-services3-commons-node';
+import { CounterType } from 'pip-services3-components-node';
+import { IConfigurable } from 'pip-services3-commons-node';
+import { IReferences } from 'pip-services3-commons-node';
+import { IReferenceable } from 'pip-services3-commons-node';
+import { IOpenable } from 'pip-services3-commons-node';
+import { Counter } from 'pip-services3-components-node';
+import { CachedCounters } from 'pip-services3-components-node';
+import { Descriptor } from 'pip-services3-commons-node';
+import { ContextInfo } from 'pip-services3-components-node';
+import { CompositeLogger } from 'pip-services3-components-node'
+import { CompositeCounters } from 'pip-services3-components-node'
 
 import { CounterV1 } from '../version1/CounterV1';
 import { IPerfMonClientV1 } from '../version1/IPerfMonClientV1';
