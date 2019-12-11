@@ -1,6 +1,6 @@
 {
     "name": "pip-clients-perfmon-node",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "Conceptual Vision Consulting LLC",
     "description": "Node.js client sdk for pip-services-perfmon microservice",
     "contributors": [
@@ -53,6 +53,6 @@
         "chai": "*",
         "mocha": "*",
         "aws-sdk": "*",
-        "pip-services-perfmon-node": "git+ssh://git@github.com:pip-services-infrastructure/pip-services-perfmon-node.git"
+        "pip-services-perfmon-node": "^1.1.0"
     }
 }
